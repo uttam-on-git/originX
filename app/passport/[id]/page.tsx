@@ -9,6 +9,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { getProductById } from "@/lib/firebase";
+import PassportQR from "@/components/PassportQR";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -140,6 +141,7 @@ export default async function PassportPage({ params }: Props) {
               </div>
             ))}
           </div>
+          <PassportQR productId={product.id} />
         </div>
         
       </div>

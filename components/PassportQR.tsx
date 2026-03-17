@@ -1,7 +1,7 @@
 "use client";
 
 import QRCode from "react-qr-code";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Copy, Check } from "lucide-react";
 
 interface Props {
@@ -10,10 +10,11 @@ interface Props {
 
 export default function PassportQR({ productId }: Props) {
   const [copied, setCopied] = useState(false);
+  const [url, setUrl] = useState("");
 
-  const url = typeof window !== "undefined"
-    ? `${window.location.origin}/passport/${productId}`
-    : "";
+  useEffect(() => {
+    setUrl(`${window.location.origin}/passport/${productId}`);
+  }, [productId]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(url);
