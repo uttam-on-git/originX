@@ -125,6 +125,53 @@ const products = [
       ],
     },
   },
+  {
+    id: "ME-TOTE-2024-001",
+    data: {
+      productName: "Aria Leather Tote",
+      brand: "Maison Elara",
+      category: "Luxury Handbags",
+      sku: "ME-TOTE-2024-001",
+      origin: "Florence, Italy",
+      manufacturedAt: "2024-11-03",
+      description: "Hand-stitched full-grain leather tote crafted by artisans in Florence.",
+      materials: ["Full-Grain Calfskin", "Brass Hardware", "Organic Cotton Lining"],
+      certifications: ["Leather Working Group Gold", "B Corp Certified"],
+      authentic: true,
+      supplyChain: [
+        {
+          stage: "Raw Material",
+          location: "Córdoba, Spain",
+          timestamp: "2024-09-10T08:00:00Z",
+          handler: "TannCraft Iberica",
+          verified: true,
+          notes: "Hides sourced from LWG-certified tannery.",
+        },
+        {
+          stage: "Manufacturing",
+          location: "Florence, Italy",
+          timestamp: "2024-10-05T09:30:00Z",
+          handler: "Bottega Rinaldi",
+          verified: true,
+          notes: "Hand-stitched by master artisans.",
+        },
+        {
+          stage: "Quality Inspection",
+          location: "Milan, Italy",
+          timestamp: "2024-10-28T14:00:00Z",
+          handler: "Maison Elara QA",
+          verified: true,
+        },
+        {
+          stage: "Retail",
+          location: "Mumbai, India",
+          timestamp: "2024-11-28T10:00:00Z",
+          handler: "Elara Flagship Store",
+          verified: true,
+        },
+      ],
+    },
+  },
 ];
 
 async function seed() {
